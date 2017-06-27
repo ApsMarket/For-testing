@@ -5,7 +5,7 @@ Library           DateTime
 
 *** Test Cases ***
 Создать допороговый тендер
-    Open Browser    http://192.168.90.169:90    chrome
+    Open Browser    http://93.183.211.107:90    chrome
     #Логин
     Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
     Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
