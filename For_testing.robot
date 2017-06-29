@@ -27,7 +27,8 @@ Library           DateTime
     Click Element    id=url_create_purchase_0
     #Название
     Wait Until Element Is Enabled    id=title
-    Input Text    id=title    Testing
+    ${xxx}=    Generate Random String
+    Input Text    id=title    Testing_${xxx}
     #Валюта
     Select From List By Label    id=select_currencies    UAH
     #Бюджет
@@ -48,10 +49,11 @@ Library           DateTime
     Wait Until Element Is Enabled    id=next_step    20
     Click Button    id=next_step
     #Добавить позицию
-    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']
     Wait Until Element Is Visible    id=add_procurement_subject0    20
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
     Click Button    id=add_procurement_subject0
-    Input Text    id=procurementSubject_description00    ТЕСТ
+    ${xxxx}=    Generate Random String
+    Input Text    id=procurementSubject_description00    ТЕСТ_${xxxx}
     Input Text    id=procurementSubject_quantity00    12
     Select From List By Label    id=select_unit00    літр
     Log To Console    add DK
@@ -80,7 +82,7 @@ Library           DateTime
     Log To Console    next step before public
     Wait Until Element Is Visible    id=update_00
     Click Button    id=update_00
-    Comment    Execute Javascript    window.scroll(-1000, -1000)
+    Execute Javascript    window.scroll(-1000, -1000)
     Wait Until Element Is Enabled    id=next_step
     Click Button    id=next_step
     #опубликовать
@@ -117,4 +119,4 @@ Set DataTime
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']
     ${tender_UID}=    Get Text    xpath=//span[@id='purchaseProzorroId']
     sleep    2
-    Log To Console    publish tender ${tender_UID}
+    Log     publish tender ${tender_UID}
