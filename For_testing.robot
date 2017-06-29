@@ -5,10 +5,14 @@ Library           DateTime
 
 *** Test Cases ***
 Создать допороговый тендер
+    Close All Browsers
+    Comment    Open Browser     http://93.183.211.107:90    chrome
     Open Browser    http://192.168.90.169:90    chrome
     #Логин
     Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
     Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
     Click Element    id=butLoginPartial
     Wait Until Element Is Visible    id=Email
     Input Text    id=Email    qa1@gmail.com
@@ -40,7 +44,8 @@ Library           DateTime
     Wait Until Element Is Enabled    id=next_step    20
     Click Button    id=next_step
     #Добавить позицию
-    Wait Until Element Is Visible    id=add_procurement_subject0
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']
+    Wait Until Element Is Visible    id=add_procurement_subject0    20
     Click Button    id=add_procurement_subject0
     Input Text    id=procurementSubject_description00    ТЕСТ
     Input Text    id=procurementSubject_quantity00    12
@@ -49,6 +54,7 @@ Library           DateTime
     Wait Until Element Is Visible    id=cls_click_
     Wait Until Element Is Enabled    id=cls_click_
     Click Button    id=cls_click_
+    Wait Until Element Is Visible    id=search-classifier-text
     Press Key    id=search-classifier-text    09000000-3
     Wait Until Element Is Enabled    //*[@id='tree']//li[@aria-selected="true"]    30
     Wait Until Element Is Visible    id=add-classifier
@@ -71,6 +77,7 @@ Library           DateTime
     Click Button    id=next_step
     #опубликовать
     публикация
+    [Teardown]    Close All Browsers
 
 *** Keywords ***
 Set DataTime
@@ -98,7 +105,7 @@ Set DataTime
     sleep    2
     Click Button    id=publishPurchase
     Wait Until Page Contains Element    id=purchaseProzorroId    90
-    Wait Until Element Is Visible    id=purchaseProzorroId    20
+    Comment    Wait Until Element Is Visible    id=purchaseProzorroId    20
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']
     ${tender_UID}=    Get Text    xpath=//span[@id='purchaseProzorroId']
     sleep    2
