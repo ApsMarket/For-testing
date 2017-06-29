@@ -8,6 +8,8 @@ Library           DateTime
     Close All Browsers
     Open Browser    http://93.183.211.107:90    chrome
     Comment    Open Browser    http://192.168.90.169:90    chrome
+    Set Window Position    0    0
+    Set Window Size    1500    900
     #Логин
     Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
