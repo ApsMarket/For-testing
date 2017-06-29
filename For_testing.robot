@@ -40,6 +40,7 @@ Library           DateTime
     Set DataTime    period_tender_end    +72 hour
     #След шаг
     Click Element    id=createOrUpdatePurchase
+    Execute Javascript    window.scroll(-1000, -1000)
     Wait Until Element Is Visible    id=next_step    15
     Wait Until Element Is Enabled    id=next_step    20
     Click Button    id=next_step
