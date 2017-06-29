@@ -42,7 +42,8 @@ Library           DateTime
     Set DataTime    period_tender_end    +72 hour
     #След шаг
     Click Element    id=createOrUpdatePurchase
-    Execute Javascript    window.scroll(-1000, -1000)
+    Comment    Execute Javascript    window.scroll(-1000, -1000)
+    Log To Console    next step before position
     Wait Until Element Is Visible    id=next_step    15
     Wait Until Element Is Enabled    id=next_step    20
     Click Button    id=next_step
@@ -53,6 +54,7 @@ Library           DateTime
     Input Text    id=procurementSubject_description00    ТЕСТ
     Input Text    id=procurementSubject_quantity00    12
     Select From List By Label    id=select_unit00    літр
+    Log To Console    add DK
     #ДК
     Wait Until Element Is Visible    id=cls_click_
     Wait Until Element Is Enabled    id=cls_click_
@@ -62,6 +64,7 @@ Library           DateTime
     Wait Until Element Is Enabled    //*[@id='tree']//li[@aria-selected="true"]    30
     Wait Until Element Is Visible    id=add-classifier
     Click Button    id=add-classifier
+    Log To Console    add other DK
     #ДК другие
     Wait Until Element Is Visible    id=btn_otherClassifier
     Click Button    id=btn_otherClassifier
@@ -74,8 +77,10 @@ Library           DateTime
     Set DataTime    id=delivery_start_00    +48 hour
     Set DataTime    id=delivery_end_00    +72 hour
     #След шаг
+    Log To Console    next step before public
     Wait Until Element Is Visible    id=update_00
     Click Button    id=update_00
+    Comment    Execute Javascript    window.scroll(-1000, -1000)
     Wait Until Element Is Enabled    id=next_step
     Click Button    id=next_step
     #опубликовать
