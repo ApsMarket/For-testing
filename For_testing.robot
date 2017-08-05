@@ -6,14 +6,14 @@ Library           DateTime
 *** Test Cases ***
 Создать допороговый тендер
     Close All Browsers
-    Open Browser    http://93.183.211.107:90    chrome
+    Open Browser    https://test-gov.ald.in.ua    chrome
     Comment    Open Browser    http://192.168.90.169:90    chrome
     Set Window Position    0    0
-    Set Window Size    1500    900
+    Set Window Size    1500    1000
     #Логин
-    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
+    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
-    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a
+    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
     Click Element    id=butLoginPartial
     Wait Until Element Is Visible    id=Email
@@ -23,8 +23,8 @@ Library           DateTime
     #Створити
     Wait Until Element Is Enabled    id=btn_create_purchase
     Click Button    id=btn_create_purchase
-    Wait Until Element Is Visible    id=url_create_purchase_0
-    Click Element    id=url_create_purchase_0
+    Wait Until Element Is Visible    id=url_create_purchase_1
+    Click Element    id=url_create_purchase_1
     #Название
     Wait Until Element Is Enabled    id=title
     ${xxx}=    Generate Random String
@@ -38,9 +38,9 @@ Library           DateTime
     Input Text    id=min_step_percentage    2
     #Дата/Время
     Set DataTime    period_enquiry_start    0
-    Set DataTime    period_enquiry_end    +48 hour
-    Set DataTime    period_tender_start    +48 hour
-    Set DataTime    period_tender_end    +72 hour
+    Set DataTime    period_enquiry_end    +24 hour
+    Set DataTime    period_tender_start    +24 hour
+    Set DataTime    period_tender_end    +168 hour
     #След шаг
     Click Element    id=createOrUpdatePurchase
     Comment    Execute Javascript    window.scroll(-1000, -1000)
@@ -92,7 +92,7 @@ Library           DateTime
 *** Keywords ***
 Set DataTime
     [Arguments]    ${dd}    ${delta}
-    ${dt}=    Get Current Date    result_format=%Y-%m-%d %H:%M    increment=${delta}    exclude_millis=True
+    ${dt}=    Get Current Date    result_format=%Y-%m-%d %H:%M:%S    increment=${delta}    
     Log To Console    ${dt}
     Comment    Run Keyword If    ${dt.minute}==${0}
     Comment    ${dt}=    Set Variable    ${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}
