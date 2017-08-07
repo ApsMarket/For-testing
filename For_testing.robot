@@ -11,15 +11,7 @@ Library           DateTime
     Set Window Position    0    0
     Set Window Size    1500    1000
     #Логин
-    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
-    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
-    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
-    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
-    Click Element    id=butLoginPartial
-    Wait Until Element Is Visible    id=Email
-    Input Text    id=Email    qa1@gmail.com
-    Input Password    id=Password    qwerty123
-    Click Button    id=submitLogin
+    Авторизация
     #Створити
     Wait Until Element Is Enabled    id=btn_create_purchase
     Click Button    id=btn_create_purchase
@@ -89,10 +81,20 @@ Library           DateTime
     публикация
     [Teardown]    Close All Browsers
 
+Загрузка главной страницы
+    Открытие главной страницы
+    Close All Browsers
+
+Отображение списка тендеров
+    Открытие главной страницы
+
+Авторизация
+    Авторизация
+
 *** Keywords ***
 Set DataTime
     [Arguments]    ${dd}    ${delta}
-    ${dt}=    Get Current Date    result_format=%Y-%m-%d %H:%M:%S    increment=${delta}    
+    ${dt}=    Get Current Date    result_format=%Y-%m-%d %H:%M:%S    increment=${delta}
     Log To Console    ${dt}
     Comment    Run Keyword If    ${dt.minute}==${0}
     Comment    ${dt}=    Set Variable    ${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}
@@ -119,4 +121,20 @@ Set DataTime
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']
     ${tender_UID}=    Get Text    xpath=//span[@id='purchaseProzorroId']
     sleep    2
-    Log     publish tender ${tender_UID}
+    Log    publish tender ${tender_UID}
+
+Открытие главной страницы
+    Open Browser    https://test-gov.ald.in.ua    chrome
+    Set Window Position    0    0
+    Set Window Size    1500    1000
+
+Авторизация
+    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
+    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
+    Click Element    id=butLoginPartial
+    Wait Until Element Is Visible    id=Email
+    Input Text    id=Email    qa1@gmail.com
+    Input Password    id=Password    qwerty123
+    Click Button    id=submitLogin
