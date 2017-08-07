@@ -6,18 +6,12 @@ Library           DateTime
 *** Test Cases ***
 Создать допороговый тендер
     Close All Browsers
-    Comment    Open Browser    http://93.183.211.107:90    chrome
-    Открітие браузера
+    Open Browser    https://test-gov.ald.in.ua    chrome
+    Comment    Open Browser    http://192.168.90.169:90    chrome
+    Set Window Position    0    0
+    Set Window Size    1500    1000
     #Логин
-    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
-    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
-    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
-    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
-    Click Element    id=butLoginPartial
-    Wait Until Element Is Visible    id=Email
-    Input Text    id=Email    qa1@gmail.com
-    Input Password    id=Password    qwerty123
-    Click Button    id=submitLogin
+    Авторизация
     #Створити
     Wait Until Element Is Enabled    id=btn_create_purchase
     Click Button    id=btn_create_purchase
@@ -42,15 +36,9 @@ Library           DateTime
     #След шаг
     Click Element    id=createOrUpdatePurchase
     Log To Console    next step before position
-    sleep    15
-    Comment    Wait Until Page Contains Element    id=next_step    40
-    Wait Until Element Is Enabled    id=next_step    40
-    Wait Until Element Is Visible    id=next_step    10
+    Wait Until Element Is Visible    id=next_step    15
+    Wait Until Element Is Enabled    id=next_step    20
     Click Button    id=next_step
-    Comment    Run Keyword And Ignore Error    Wait For Condition    return $(".page-loader").css("display")=="none"    40
-    Comment    Log To Console    before button click
-    Comment    Execute Javascript    $('#next_step').click()
-    Log To Console    after button click
     #Добавить позицию
     Wait Until Element Is Visible    id=add_procurement_subject0    20
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
@@ -92,6 +80,15 @@ Library           DateTime
     публикация
     [Teardown]    Close All Browsers
 
+Загрузка главной страницы
+    Открытие главной страницы
+    Close All Browsers
+
+Отображение списка тендеров
+    Открытие главной страницы
+
+Авторизация
+    Авторизация
 Инфо до клика Наступний крок
 
 *** Keywords ***
@@ -126,6 +123,10 @@ Set DataTime
     sleep    2
     Log    publish tender ${tender_UID}
 
+Открытие главной страницы
+    Open Browser    https://test-gov.ald.in.ua    chrome
+    Set Window Position    0    0
+    Set Window Size    1500    1000
 Ввод текстовых данных название валюта
     #Название
     Wait Until Element Is Enabled    id=title
@@ -134,6 +135,16 @@ Set DataTime
     #Валюта
     Select From List By Label    id=select_currencies    UAH
 
+Авторизация
+    Wait Until Page Contains Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
+    Click Element    xpath=.//*[@id='liLoginNoAuthenticated']/a/i
+    Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
+    Click Element    id=butLoginPartial
+    Wait Until Element Is Visible    id=Email
+    Input Text    id=Email    qa1@gmail.com
+    Input Password    id=Password    qwerty123
+    Click Button    id=submitLogin
 Многолотовый тендер
     Log To Console    Выбор многолотовости
     Click Element    is_multilot
