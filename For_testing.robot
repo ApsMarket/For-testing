@@ -2,6 +2,7 @@
 Library           Selenium2Library
 Library           String
 Library           DateTime
+Library           FakerLibrary
 
 *** Test Cases ***
 Создать допороговый тендер
@@ -19,8 +20,9 @@ Library           DateTime
     Click Element    id=url_create_purchase_1
     #Название
     Wait Until Element Is Enabled    id=title
+    ${randomwords}=    FakerLibrary.Words    nb=3
     ${xxx}=    Generate Random String
-    Input Text    id=title    Testing_${xxx}
+    Input Text    id=title    ${randomwords[0]} ${randomwords[1]} ${randomwords[2]}_${xxx}
     #Валюта
     Select From List By Label    id=select_currencies    UAH
     #Бюджет
@@ -43,8 +45,9 @@ Library           DateTime
     Wait Until Element Is Visible    id=add_procurement_subject0    20
     Run Keyword And Ignore Error    Wait Until Element Is Not Visible    xpath=.//div[@class='page-loader animated fadeIn']    30
     Click Button    id=add_procurement_subject0
+    ${randomwords1}=    FakerLibrary.Words    nb=2
     ${xxxx}=    Generate Random String
-    Input Text    id=procurementSubject_description00    ТЕСТ_${xxxx}
+    Input Text    id=procurementSubject_description00    ${randomwords[0]} ${randomwords[1]}_${xxxx}
     Input Text    id=procurementSubject_quantity00    12
     Select From List By Label    id=select_unit00    літр
     Log To Console    add DK
@@ -89,7 +92,12 @@ Library           DateTime
 
 Авторизация
     Авторизация
+
 Инфо до клика Наступний крок
+    Открытие главной страницы
+    Авторизация
+    Выбор из меню створити
+    Click Button    next_step
 
 *** Keywords ***
 Set DataTime
@@ -127,6 +135,7 @@ Set DataTime
     Open Browser    https://test-gov.ald.in.ua    chrome
     Set Window Position    0    0
     Set Window Size    1500    1000
+
 Ввод текстовых данных название валюта
     #Название
     Wait Until Element Is Enabled    id=title
@@ -145,6 +154,28 @@ Set DataTime
     Input Text    id=Email    qa1@gmail.com
     Input Password    id=Password    qwerty123
     Click Button    id=submitLogin
+
 Многолотовый тендер
     Log To Console    Выбор многолотовости
     Click Element    is_multilot
+    Ввод дат
+
+Ввод дат
+    Log To Console    Дата/Время
+    Set DataTime    period_enquiry_start    0
+    Set DataTime    period_enquiry_end    +24 hour
+    Set DataTime    period_tender_start    +24 hour
+    Set DataTime    period_tender_end    +168 hour
+
+Однолотовый тендер
+    Log To Console    Бюджет
+    Wait Until Element Is Visible    id=budget
+    Input Text    id=budget    15973
+    Log To Console    Минимальный шаг
+    Wait Until Element Is Visible    id=min_step_percentage
+    Input Text    id=min_step_percentage    2
+
+Выбор из меню створити
+    Log To Console    Выбор процедуры из меню
+    Click Button    btn_create_purchase
+    Click Element    url_create_purchase_1

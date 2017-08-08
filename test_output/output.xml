@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170629 11:58:26.263" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<robot generated="20170808 17:13:35.410" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
 <suite source="/home/ova/Testing/For_testing.robot" id="s1" name="For testing">
 <test id="s1-t1" name="Создать допороговый тендер">
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20170629 11:58:26.412" starttime="20170629 11:58:26.412"></status>
+<status status="PASS" endtime="20170808 17:13:35.647" starttime="20170808 17:13:35.646"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://test-gov.ald.in.ua</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20170808 17:13:35.648" level="INFO">Opening browser 'chrome' to base url 'https://test-gov.ald.in.ua'</msg>
+<status status="PASS" endtime="20170808 17:13:39.242" starttime="20170808 17:13:35.647"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
 <arguments>
 <arg>Open Browser</arg>
-<arg>http://93.183.211.107:90</arg>
-<arg>chrome</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:58:26.414" starttime="20170629 11:58:26.413"></status>
-</kw>
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
 <arg>http://192.168.90.169:90</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20170629 11:58:26.415" level="INFO">Opening browser 'chrome' to base url 'http://192.168.90.169:90'</msg>
-<status status="PASS" endtime="20170629 11:58:33.412" starttime="20170629 11:58:26.414"></status>
+<status status="PASS" endtime="20170808 17:13:39.244" starttime="20170808 17:13:39.243"></status>
 </kw>
 <kw name="Set Window Position" library="Selenium2Library">
 <doc>Sets the position `x` and `y` of the current window to the specified values.</doc>
@@ -30,22 +30,23 @@
 <arg>0</arg>
 <arg>0</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:33.676" starttime="20170629 11:58:33.414"></status>
+<status status="PASS" endtime="20170808 17:13:39.417" starttime="20170808 17:13:39.245"></status>
 </kw>
 <kw name="Set Window Size" library="Selenium2Library">
 <doc>Sets the `width` and `height` of the current window to the specified values.</doc>
 <arguments>
 <arg>1500</arg>
-<arg>900</arg>
+<arg>1000</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:33.803" starttime="20170629 11:58:33.677"></status>
+<status status="PASS" endtime="20170808 17:13:39.538" starttime="20170808 17:13:39.418"></status>
 </kw>
+<kw name="Авторизация">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
-<arg>xpath=.//*[@id='liLoginNoAuthenticated']/a</arg>
+<arg>xpath=.//*[@id='liLoginNoAuthenticated']/a/i</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:33.915" starttime="20170629 11:58:33.803"></status>
+<status status="PASS" endtime="20170808 17:13:39.571" starttime="20170808 17:13:39.544"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -60,17 +61,17 @@
 <arg>xpath=.//div[@class='page-loader animated fadeIn']</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:33.980" starttime="20170629 11:58:33.916"></status>
+<status status="PASS" endtime="20170808 17:13:39.617" starttime="20170808 17:13:39.572"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:33.981" starttime="20170629 11:58:33.915"></status>
+<status status="PASS" endtime="20170808 17:13:39.618" starttime="20170808 17:13:39.572"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=.//*[@id='liLoginNoAuthenticated']/a</arg>
+<arg>xpath=.//*[@id='liLoginNoAuthenticated']/a/i</arg>
 </arguments>
-<msg timestamp="20170629 11:58:33.982" level="INFO">Clicking element 'xpath=.//*[@id='liLoginNoAuthenticated']/a'.</msg>
-<status status="PASS" endtime="20170629 11:58:34.123" starttime="20170629 11:58:33.981"></status>
+<msg timestamp="20170808 17:13:39.619" level="INFO">Clicking element 'xpath=.//*[@id='liLoginNoAuthenticated']/a/i'.</msg>
+<status status="PASS" endtime="20170808 17:13:39.706" starttime="20170808 17:13:39.618"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -85,24 +86,24 @@
 <arg>xpath=.//div[@class='page-loader animated fadeIn']</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:34.157" starttime="20170629 11:58:34.124"></status>
+<status status="PASS" endtime="20170808 17:13:39.725" starttime="20170808 17:13:39.708"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:34.157" starttime="20170629 11:58:34.124"></status>
+<status status="PASS" endtime="20170808 17:13:39.725" starttime="20170808 17:13:39.707"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=butLoginPartial</arg>
 </arguments>
-<msg timestamp="20170629 11:58:34.158" level="INFO">Clicking element 'id=butLoginPartial'.</msg>
-<status status="PASS" endtime="20170629 11:58:34.325" starttime="20170629 11:58:34.157"></status>
+<msg timestamp="20170808 17:13:39.726" level="INFO">Clicking element 'id=butLoginPartial'.</msg>
+<status status="PASS" endtime="20170808 17:13:40.024" starttime="20170808 17:13:39.726"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=Email</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:34.828" starttime="20170629 11:58:34.326"></status>
+<status status="PASS" endtime="20170808 17:13:40.091" starttime="20170808 17:13:40.024"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -110,8 +111,8 @@
 <arg>id=Email</arg>
 <arg>qa1@gmail.com</arg>
 </arguments>
-<msg timestamp="20170629 11:58:34.830" level="INFO">Typing text 'qa1@gmail.com' into text field 'id=Email'</msg>
-<status status="PASS" endtime="20170629 11:58:35.150" starttime="20170629 11:58:34.829"></status>
+<msg timestamp="20170808 17:13:40.092" level="INFO">Typing text 'qa1@gmail.com' into text field 'id=Email'</msg>
+<status status="PASS" endtime="20170808 17:13:40.237" starttime="20170808 17:13:40.092"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into text field identified by `locator`.</doc>
@@ -119,70 +120,83 @@
 <arg>id=Password</arg>
 <arg>qwerty123</arg>
 </arguments>
-<msg timestamp="20170629 11:58:35.151" level="INFO">Typing password into text field 'id=Password'</msg>
-<status status="PASS" endtime="20170629 11:58:35.358" starttime="20170629 11:58:35.151"></status>
+<msg timestamp="20170808 17:13:40.238" level="INFO">Typing password into text field 'id=Password'</msg>
+<status status="PASS" endtime="20170808 17:13:40.442" starttime="20170808 17:13:40.238"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=submitLogin</arg>
 </arguments>
-<msg timestamp="20170629 11:58:35.360" level="INFO">Clicking button 'id=submitLogin'.</msg>
-<status status="PASS" endtime="20170629 11:58:37.612" starttime="20170629 11:58:35.359"></status>
+<msg timestamp="20170808 17:13:40.444" level="INFO">Clicking button 'id=submitLogin'.</msg>
+<status status="PASS" endtime="20170808 17:13:42.033" starttime="20170808 17:13:40.443"></status>
+</kw>
+<status status="PASS" endtime="20170808 17:13:42.034" starttime="20170808 17:13:39.539"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
 <arg>id=btn_create_purchase</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:37.785" starttime="20170629 11:58:37.613"></status>
+<status status="PASS" endtime="20170808 17:13:42.080" starttime="20170808 17:13:42.034"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=btn_create_purchase</arg>
 </arguments>
-<msg timestamp="20170629 11:58:37.786" level="INFO">Clicking button 'id=btn_create_purchase'.</msg>
-<status status="PASS" endtime="20170629 11:58:37.950" starttime="20170629 11:58:37.786"></status>
+<msg timestamp="20170808 17:13:42.081" level="INFO">Clicking button 'id=btn_create_purchase'.</msg>
+<status status="PASS" endtime="20170808 17:13:42.185" starttime="20170808 17:13:42.080"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>id=url_create_purchase_0</arg>
+<arg>id=url_create_purchase_1</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:38.044" starttime="20170629 11:58:37.951"></status>
+<status status="PASS" endtime="20170808 17:13:42.237" starttime="20170808 17:13:42.185"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>id=url_create_purchase_0</arg>
+<arg>id=url_create_purchase_1</arg>
 </arguments>
-<msg timestamp="20170629 11:58:38.045" level="INFO">Clicking element 'id=url_create_purchase_0'.</msg>
-<status status="PASS" endtime="20170629 11:58:38.879" starttime="20170629 11:58:38.045"></status>
+<msg timestamp="20170808 17:13:42.237" level="INFO">Clicking element 'id=url_create_purchase_1'.</msg>
+<status status="PASS" endtime="20170808 17:13:42.847" starttime="20170808 17:13:42.237"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
 <arg>id=title</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:38.957" starttime="20170629 11:58:38.880"></status>
+<status status="PASS" endtime="20170808 17:13:42.937" starttime="20170808 17:13:42.848"></status>
+</kw>
+<kw name="Words" library="FakerLibrary">
+<doc>:returns: An array of random words. for example: ['Lorem', 'ipsum', 'dolor']</doc>
+<arguments>
+<arg>nb=3</arg>
+</arguments>
+<assign>
+<var>${randomwords}</var>
+</assign>
+<msg timestamp="20170808 17:13:42.938" level="INFO">${randomwords} = [u'unde', u'natus', u'enim']</msg>
+<status status="PASS" endtime="20170808 17:13:42.938" starttime="20170808 17:13:42.938"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <assign>
 <var>${xxx}</var>
 </assign>
-<msg timestamp="20170629 11:58:38.960" level="INFO">${xxx} = ujfIBndv</msg>
-<status status="PASS" endtime="20170629 11:58:38.960" starttime="20170629 11:58:38.958"></status>
+<msg timestamp="20170808 17:13:42.939" level="INFO">${xxx} = 2eDckURD</msg>
+<status status="PASS" endtime="20170808 17:13:42.939" starttime="20170808 17:13:42.939"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>id=title</arg>
-<arg>Testing_${xxx}</arg>
+<arg>${randomwords[0]} ${randomwords[1]} ${randomwords[2]}_${xxx}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:38.961" level="INFO">Typing text 'Testing_ujfIBndv' into text field 'id=title'</msg>
-<status status="PASS" endtime="20170629 11:58:39.398" starttime="20170629 11:58:38.961"></status>
+<msg timestamp="20170808 17:13:42.940" level="INFO">Typing text 'unde natus enim_2eDckURD' into text field 'id=title'</msg>
+<status status="PASS" endtime="20170808 17:13:43.335" starttime="20170808 17:13:42.940"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -190,15 +204,15 @@
 <arg>id=select_currencies</arg>
 <arg>UAH</arg>
 </arguments>
-<msg timestamp="20170629 11:58:39.400" level="INFO">Selecting label(s) 'UAH' from list 'id=select_currencies'.</msg>
-<status status="PASS" endtime="20170629 11:58:39.613" starttime="20170629 11:58:39.399"></status>
+<msg timestamp="20170808 17:13:43.336" level="INFO">Selecting label(s) 'UAH' from list 'id=select_currencies'.</msg>
+<status status="PASS" endtime="20170808 17:13:43.479" starttime="20170808 17:13:43.336"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=budget</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:39.682" starttime="20170629 11:58:39.615"></status>
+<status status="PASS" endtime="20170808 17:13:43.525" starttime="20170808 17:13:43.480"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -206,15 +220,15 @@
 <arg>id=budget</arg>
 <arg>15973</arg>
 </arguments>
-<msg timestamp="20170629 11:58:39.684" level="INFO">Typing text '15973' into text field 'id=budget'</msg>
-<status status="PASS" endtime="20170629 11:58:39.993" starttime="20170629 11:58:39.683"></status>
+<msg timestamp="20170808 17:13:43.526" level="INFO">Typing text '15973' into text field 'id=budget'</msg>
+<status status="PASS" endtime="20170808 17:13:43.709" starttime="20170808 17:13:43.525"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=min_step_percentage</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.063" starttime="20170629 11:58:39.994"></status>
+<status status="PASS" endtime="20170808 17:13:43.752" starttime="20170808 17:13:43.709"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -222,8 +236,8 @@
 <arg>id=min_step_percentage</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.064" level="INFO">Typing text '2' into text field 'id=min_step_percentage'</msg>
-<status status="PASS" endtime="20170629 11:58:40.242" starttime="20170629 11:58:40.064"></status>
+<msg timestamp="20170808 17:13:43.753" level="INFO">Typing text '2' into text field 'id=min_step_percentage'</msg>
+<status status="PASS" endtime="20170808 17:13:43.879" starttime="20170808 17:13:43.753"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
@@ -233,22 +247,21 @@
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.245" level="INFO">${dt} = 2017-06-29 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:40.245" starttime="20170629 11:58:40.244"></status>
+<msg timestamp="20170808 17:13:43.881" level="INFO">${dt} = 2017-08-08 17:13:43</msg>
+<status status="PASS" endtime="20170808 17:13:43.881" starttime="20170808 17:13:43.880"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.246" starttime="20170629 11:58:40.245"></status>
+<status status="PASS" endtime="20170808 17:13:43.882" starttime="20170808 17:13:43.881"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -256,7 +269,7 @@
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.247" starttime="20170629 11:58:40.247"></status>
+<status status="PASS" endtime="20170808 17:13:43.883" starttime="20170808 17:13:43.882"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -265,14 +278,14 @@
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.248" starttime="20170629 11:58:40.247"></status>
+<status status="PASS" endtime="20170808 17:13:43.884" starttime="20170808 17:13:43.883"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.250" starttime="20170629 11:58:40.249"></status>
+<status status="PASS" endtime="20170808 17:13:43.884" starttime="20170808 17:13:43.884"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -284,8 +297,8 @@
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.252" level="INFO">${id} = period_enquiry_start</msg>
-<status status="PASS" endtime="20170629 11:58:40.252" starttime="20170629 11:58:40.251"></status>
+<msg timestamp="20170808 17:13:43.885" level="INFO">${id} = period_enquiry_start</msg>
+<status status="PASS" endtime="20170808 17:13:43.886" starttime="20170808 17:13:43.885"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -295,44 +308,43 @@
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.255" level="INFO">${ddd} = SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.255" starttime="20170629 11:58:40.253"></status>
+<msg timestamp="20170808 17:13:43.886" level="INFO">${ddd} = SetDateTimePickerValue('period_enquiry_start','2017-08-08 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.887" starttime="20170808 17:13:43.886"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.257" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.294" starttime="20170629 11:58:40.256"></status>
+<msg timestamp="20170808 17:13:43.887" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('period_enquiry_start','2017-08-08 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.913" starttime="20170808 17:13:43.887"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:40.297" starttime="20170629 11:58:40.243"></status>
+<status status="PASS" endtime="20170808 17:13:43.914" starttime="20170808 17:13:43.880"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
 <arg>period_enquiry_end</arg>
-<arg>+48 hour</arg>
+<arg>+24 hour</arg>
 </arguments>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.304" level="INFO">${dt} = 2017-07-01 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:40.305" starttime="20170629 11:58:40.303"></status>
+<msg timestamp="20170808 17:13:43.915" level="INFO">${dt} = 2017-08-09 17:13:43</msg>
+<status status="PASS" endtime="20170808 17:13:43.915" starttime="20170808 17:13:43.914"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.306" starttime="20170629 11:58:40.305"></status>
+<status status="PASS" endtime="20170808 17:13:43.916" starttime="20170808 17:13:43.916"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -340,7 +352,7 @@ SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.307" starttime="20170629 11:58:40.306"></status>
+<status status="PASS" endtime="20170808 17:13:43.917" starttime="20170808 17:13:43.917"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -349,14 +361,14 @@ SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.308" starttime="20170629 11:58:40.307"></status>
+<status status="PASS" endtime="20170808 17:13:43.918" starttime="20170808 17:13:43.918"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.308" starttime="20170629 11:58:40.308"></status>
+<status status="PASS" endtime="20170808 17:13:43.919" starttime="20170808 17:13:43.918"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -368,8 +380,8 @@ SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.309" level="INFO">${id} = period_enquiry_end</msg>
-<status status="PASS" endtime="20170629 11:58:40.310" starttime="20170629 11:58:40.309"></status>
+<msg timestamp="20170808 17:13:43.920" level="INFO">${id} = period_enquiry_end</msg>
+<status status="PASS" endtime="20170808 17:13:43.920" starttime="20170808 17:13:43.919"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -379,44 +391,43 @@ SetDateTimePickerValue('period_enquiry_start','2017-06-29 11:58');</msg>
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.311" level="INFO">${ddd} = SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.311" starttime="20170629 11:58:40.310"></status>
+<msg timestamp="20170808 17:13:43.921" level="INFO">${ddd} = SetDateTimePickerValue('period_enquiry_end','2017-08-09 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.921" starttime="20170808 17:13:43.920"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.314" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.342" starttime="20170629 11:58:40.311"></status>
+<msg timestamp="20170808 17:13:43.922" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('period_enquiry_end','2017-08-09 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.936" starttime="20170808 17:13:43.922"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:40.343" starttime="20170629 11:58:40.303"></status>
+<status status="PASS" endtime="20170808 17:13:43.936" starttime="20170808 17:13:43.914"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
 <arg>period_tender_start</arg>
-<arg>+48 hour</arg>
+<arg>+24 hour</arg>
 </arguments>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.349" level="INFO">${dt} = 2017-07-01 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:40.354" starttime="20170629 11:58:40.348"></status>
+<msg timestamp="20170808 17:13:43.938" level="INFO">${dt} = 2017-08-09 17:13:43</msg>
+<status status="PASS" endtime="20170808 17:13:43.938" starttime="20170808 17:13:43.937"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.356" starttime="20170629 11:58:40.355"></status>
+<status status="PASS" endtime="20170808 17:13:43.939" starttime="20170808 17:13:43.938"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -424,7 +435,7 @@ SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.361" starttime="20170629 11:58:40.356"></status>
+<status status="PASS" endtime="20170808 17:13:43.940" starttime="20170808 17:13:43.939"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -433,14 +444,14 @@ SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.363" starttime="20170629 11:58:40.362"></status>
+<status status="PASS" endtime="20170808 17:13:43.940" starttime="20170808 17:13:43.940"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.365" starttime="20170629 11:58:40.363"></status>
+<status status="PASS" endtime="20170808 17:13:43.941" starttime="20170808 17:13:43.940"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -452,8 +463,8 @@ SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.367" level="INFO">${id} = period_tender_start</msg>
-<status status="PASS" endtime="20170629 11:58:40.367" starttime="20170629 11:58:40.366"></status>
+<msg timestamp="20170808 17:13:43.942" level="INFO">${id} = period_tender_start</msg>
+<status status="PASS" endtime="20170808 17:13:43.942" starttime="20170808 17:13:43.941"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -463,44 +474,43 @@ SetDateTimePickerValue('period_enquiry_end','2017-07-01 11:58');</msg>
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.368" level="INFO">${ddd} = SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.369" starttime="20170629 11:58:40.367"></status>
+<msg timestamp="20170808 17:13:43.943" level="INFO">${ddd} = SetDateTimePickerValue('period_tender_start','2017-08-09 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.943" starttime="20170808 17:13:43.942"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.370" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.391" starttime="20170629 11:58:40.369"></status>
+<msg timestamp="20170808 17:13:43.943" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('period_tender_start','2017-08-09 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.971" starttime="20170808 17:13:43.943"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:40.392" starttime="20170629 11:58:40.343"></status>
+<status status="PASS" endtime="20170808 17:13:43.972" starttime="20170808 17:13:43.937"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
 <arg>period_tender_end</arg>
-<arg>+72 hour</arg>
+<arg>+168 hour</arg>
 </arguments>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.394" level="INFO">${dt} = 2017-07-02 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:40.394" starttime="20170629 11:58:40.393"></status>
+<msg timestamp="20170808 17:13:43.974" level="INFO">${dt} = 2017-08-15 17:13:43</msg>
+<status status="PASS" endtime="20170808 17:13:43.974" starttime="20170808 17:13:43.973"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.395" starttime="20170629 11:58:40.394"></status>
+<status status="PASS" endtime="20170808 17:13:43.975" starttime="20170808 17:13:43.974"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -508,7 +518,7 @@ SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.396" starttime="20170629 11:58:40.396"></status>
+<status status="PASS" endtime="20170808 17:13:43.976" starttime="20170808 17:13:43.975"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -517,14 +527,14 @@ SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.397" starttime="20170629 11:58:40.397"></status>
+<status status="PASS" endtime="20170808 17:13:43.978" starttime="20170808 17:13:43.977"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.398" starttime="20170629 11:58:40.397"></status>
+<status status="PASS" endtime="20170808 17:13:43.980" starttime="20170808 17:13:43.979"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -536,8 +546,8 @@ SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.400" level="INFO">${id} = period_tender_end</msg>
-<status status="PASS" endtime="20170629 11:58:40.400" starttime="20170629 11:58:40.399"></status>
+<msg timestamp="20170808 17:13:43.981" level="INFO">${id} = period_tender_end</msg>
+<status status="PASS" endtime="20170808 17:13:43.981" starttime="20170808 17:13:43.980"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -547,42 +557,34 @@ SetDateTimePickerValue('period_tender_start','2017-07-01 11:58');</msg>
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:40.401" level="INFO">${ddd} = SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.402" starttime="20170629 11:58:40.401"></status>
+<msg timestamp="20170808 17:13:43.982" level="INFO">${ddd} = SetDateTimePickerValue('period_tender_end','2017-08-15 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:43.982" starttime="20170808 17:13:43.981"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.403" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:40.455" starttime="20170629 11:58:40.402"></status>
+<msg timestamp="20170808 17:13:43.983" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('period_tender_end','2017-08-15 17:13:43');</msg>
+<status status="PASS" endtime="20170808 17:13:44.008" starttime="20170808 17:13:43.983"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:40.460" starttime="20170629 11:58:40.392"></status>
+<status status="PASS" endtime="20170808 17:13:44.009" starttime="20170808 17:13:43.972"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>id=createOrUpdatePurchase</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.463" level="INFO">Clicking element 'id=createOrUpdatePurchase'.</msg>
-<status status="PASS" endtime="20170629 11:58:40.660" starttime="20170629 11:58:40.462"></status>
-</kw>
-<kw name="Comment" library="BuiltIn">
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<arguments>
-<arg>Execute Javascript</arg>
-<arg>window.scroll(-1000, -1000)</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:58:40.662" starttime="20170629 11:58:40.660"></status>
+<msg timestamp="20170808 17:13:44.012" level="INFO">Clicking element 'id=createOrUpdatePurchase'.</msg>
+<status status="PASS" endtime="20170808 17:13:44.109" starttime="20170808 17:13:44.011"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>next step before position</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.666" starttime="20170629 11:58:40.664"></status>
+<status status="PASS" endtime="20170808 17:13:44.111" starttime="20170808 17:13:44.110"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
@@ -590,7 +592,7 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=next_step</arg>
 <arg>15</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.735" starttime="20170629 11:58:40.666"></status>
+<status status="PASS" endtime="20170808 17:13:44.166" starttime="20170808 17:13:44.111"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
@@ -598,15 +600,15 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=next_step</arg>
 <arg>20</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:40.758" starttime="20170629 11:58:40.736"></status>
+<status status="PASS" endtime="20170808 17:13:44.184" starttime="20170808 17:13:44.167"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=next_step</arg>
 </arguments>
-<msg timestamp="20170629 11:58:40.759" level="INFO">Clicking button 'id=next_step'.</msg>
-<status status="PASS" endtime="20170629 11:58:40.907" starttime="20170629 11:58:40.758"></status>
+<msg timestamp="20170808 17:13:44.186" level="INFO">Clicking button 'id=next_step'.</msg>
+<status status="PASS" endtime="20170808 17:13:44.295" starttime="20170808 17:13:44.185"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
@@ -614,7 +616,7 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=add_procurement_subject0</arg>
 <arg>20</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:42.228" starttime="20170629 11:58:40.908"></status>
+<status status="PASS" endtime="20170808 17:13:45.333" starttime="20170808 17:13:44.296"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -629,34 +631,45 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>xpath=.//div[@class='page-loader animated fadeIn']</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:42.278" starttime="20170629 11:58:42.230"></status>
+<status status="PASS" endtime="20170808 17:13:45.368" starttime="20170808 17:13:45.334"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:42.279" starttime="20170629 11:58:42.229"></status>
+<status status="PASS" endtime="20170808 17:13:45.368" starttime="20170808 17:13:45.333"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=add_procurement_subject0</arg>
 </arguments>
-<msg timestamp="20170629 11:58:42.280" level="INFO">Clicking button 'id=add_procurement_subject0'.</msg>
-<status status="PASS" endtime="20170629 11:58:42.704" starttime="20170629 11:58:42.279"></status>
+<msg timestamp="20170808 17:13:45.369" level="INFO">Clicking button 'id=add_procurement_subject0'.</msg>
+<status status="PASS" endtime="20170808 17:13:45.610" starttime="20170808 17:13:45.369"></status>
+</kw>
+<kw name="Words" library="FakerLibrary">
+<doc>:returns: An array of random words. for example: ['Lorem', 'ipsum', 'dolor']</doc>
+<arguments>
+<arg>nb=2</arg>
+</arguments>
+<assign>
+<var>${randomwords1}</var>
+</assign>
+<msg timestamp="20170808 17:13:45.612" level="INFO">${randomwords1} = [u'ipsa', u'repellendus']</msg>
+<status status="PASS" endtime="20170808 17:13:45.612" starttime="20170808 17:13:45.611"></status>
 </kw>
 <kw name="Generate Random String" library="String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
 <assign>
 <var>${xxxx}</var>
 </assign>
-<msg timestamp="20170629 11:58:42.707" level="INFO">${xxxx} = 86GeThyM</msg>
-<status status="PASS" endtime="20170629 11:58:42.707" starttime="20170629 11:58:42.706"></status>
+<msg timestamp="20170808 17:13:45.613" level="INFO">${xxxx} = 0dqqqakt</msg>
+<status status="PASS" endtime="20170808 17:13:45.613" starttime="20170808 17:13:45.612"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>id=procurementSubject_description00</arg>
-<arg>ТЕСТ_${xxxx}</arg>
+<arg>${randomwords[0]} ${randomwords[1]}_${xxxx}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:42.708" level="INFO">Typing text 'ТЕСТ_86GeThyM' into text field 'id=procurementSubject_description00'</msg>
-<status status="PASS" endtime="20170629 11:58:44.369" starttime="20170629 11:58:42.708"></status>
+<msg timestamp="20170808 17:13:45.614" level="INFO">Typing text 'unde natus_0dqqqakt' into text field 'id=procurementSubject_description00'</msg>
+<status status="PASS" endtime="20170808 17:13:46.941" starttime="20170808 17:13:45.614"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -664,8 +677,8 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=procurementSubject_quantity00</arg>
 <arg>12</arg>
 </arguments>
-<msg timestamp="20170629 11:58:44.372" level="INFO">Typing text '12' into text field 'id=procurementSubject_quantity00'</msg>
-<status status="PASS" endtime="20170629 11:58:44.736" starttime="20170629 11:58:44.371"></status>
+<msg timestamp="20170808 17:13:46.942" level="INFO">Typing text '12' into text field 'id=procurementSubject_quantity00'</msg>
+<status status="PASS" endtime="20170808 17:13:47.196" starttime="20170808 17:13:46.942"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -673,44 +686,44 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=select_unit00</arg>
 <arg>літр</arg>
 </arguments>
-<msg timestamp="20170629 11:58:44.738" level="INFO">Selecting label(s) 'літр' from list 'id=select_unit00'.</msg>
-<status status="PASS" endtime="20170629 11:58:44.991" starttime="20170629 11:58:44.737"></status>
+<msg timestamp="20170808 17:13:47.197" level="INFO">Selecting label(s) 'літр' from list 'id=select_unit00'.</msg>
+<status status="PASS" endtime="20170808 17:13:47.355" starttime="20170808 17:13:47.197"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>add DK</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:44.994" starttime="20170629 11:58:44.992"></status>
+<status status="PASS" endtime="20170808 17:13:47.356" starttime="20170808 17:13:47.356"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=cls_click_</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:45.084" starttime="20170629 11:58:44.995"></status>
+<status status="PASS" endtime="20170808 17:13:47.452" starttime="20170808 17:13:47.357"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
 <arg>id=cls_click_</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:45.109" starttime="20170629 11:58:45.085"></status>
+<status status="PASS" endtime="20170808 17:13:47.469" starttime="20170808 17:13:47.452"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=cls_click_</arg>
 </arguments>
-<msg timestamp="20170629 11:58:45.110" level="INFO">Clicking button 'id=cls_click_'.</msg>
-<status status="PASS" endtime="20170629 11:58:45.349" starttime="20170629 11:58:45.110"></status>
+<msg timestamp="20170808 17:13:47.470" level="INFO">Clicking button 'id=cls_click_'.</msg>
+<status status="PASS" endtime="20170808 17:13:47.602" starttime="20170808 17:13:47.469"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=search-classifier-text</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:46.158" starttime="20170629 11:58:45.350"></status>
+<status status="PASS" endtime="20170808 17:13:48.176" starttime="20170808 17:13:47.603"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -718,7 +731,7 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=search-classifier-text</arg>
 <arg>09000000-3</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:47.978" starttime="20170629 11:58:46.158"></status>
+<status status="PASS" endtime="20170808 17:13:49.092" starttime="20170808 17:13:48.177"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
@@ -726,51 +739,51 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>//*[@id='tree']//li[@aria-selected="true"]</arg>
 <arg>30</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:48.332" starttime="20170629 11:58:47.981"></status>
+<status status="PASS" endtime="20170808 17:13:49.168" starttime="20170808 17:13:49.092"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=add-classifier</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:48.393" starttime="20170629 11:58:48.333"></status>
+<status status="PASS" endtime="20170808 17:13:49.210" starttime="20170808 17:13:49.168"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=add-classifier</arg>
 </arguments>
-<msg timestamp="20170629 11:58:48.395" level="INFO">Clicking button 'id=add-classifier'.</msg>
-<status status="PASS" endtime="20170629 11:58:48.582" starttime="20170629 11:58:48.394"></status>
+<msg timestamp="20170808 17:13:49.211" level="INFO">Clicking button 'id=add-classifier'.</msg>
+<status status="PASS" endtime="20170808 17:13:49.332" starttime="20170808 17:13:49.210"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>add other DK</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:48.584" starttime="20170629 11:58:48.582"></status>
+<status status="PASS" endtime="20170808 17:13:49.334" starttime="20170808 17:13:49.333"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=btn_otherClassifier</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:48.975" starttime="20170629 11:58:48.585"></status>
+<status status="PASS" endtime="20170808 17:13:49.568" starttime="20170808 17:13:49.334"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=btn_otherClassifier</arg>
 </arguments>
-<msg timestamp="20170629 11:58:48.976" level="INFO">Clicking button 'id=btn_otherClassifier'.</msg>
-<status status="PASS" endtime="20170629 11:58:49.311" starttime="20170629 11:58:48.975"></status>
+<msg timestamp="20170808 17:13:49.570" level="INFO">Clicking button 'id=btn_otherClassifier'.</msg>
+<status status="PASS" endtime="20170808 17:13:49.836" starttime="20170808 17:13:49.569"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=search-classifier-text</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:50.069" starttime="20170629 11:58:49.312"></status>
+<status status="PASS" endtime="20170808 17:13:50.385" starttime="20170808 17:13:49.836"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -778,7 +791,7 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>id=search-classifier-text</arg>
 <arg>000</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:50.725" starttime="20170629 11:58:50.070"></status>
+<status status="PASS" endtime="20170808 17:13:50.946" starttime="20170808 17:13:50.386"></status>
 </kw>
 <kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is not visible.</doc>
@@ -786,22 +799,22 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>xpath=//div[@class="modal-backdrop fade"]</arg>
 <arg>5</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:50.867" starttime="20170629 11:58:50.726"></status>
+<status status="PASS" endtime="20170808 17:13:51.013" starttime="20170808 17:13:50.947"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=add-classifier</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:50.893" starttime="20170629 11:58:50.868"></status>
+<status status="PASS" endtime="20170808 17:13:51.032" starttime="20170808 17:13:51.014"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=add-classifier</arg>
 </arguments>
-<msg timestamp="20170629 11:58:50.894" level="INFO">Clicking button 'id=add-classifier'.</msg>
-<status status="PASS" endtime="20170629 11:58:51.064" starttime="20170629 11:58:50.894"></status>
+<msg timestamp="20170808 17:13:51.033" level="INFO">Clicking button 'id=add-classifier'.</msg>
+<status status="PASS" endtime="20170808 17:13:51.213" starttime="20170808 17:13:51.033"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
@@ -811,22 +824,21 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.068" level="INFO">${dt} = 2017-07-01 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:51.068" starttime="20170629 11:58:51.067"></status>
+<msg timestamp="20170808 17:13:51.215" level="INFO">${dt} = 2017-08-10 17:13:51</msg>
+<status status="PASS" endtime="20170808 17:13:51.215" starttime="20170808 17:13:51.214"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.069" starttime="20170629 11:58:51.069"></status>
+<status status="PASS" endtime="20170808 17:13:51.216" starttime="20170808 17:13:51.215"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -834,7 +846,7 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.070" starttime="20170629 11:58:51.070"></status>
+<status status="PASS" endtime="20170808 17:13:51.216" starttime="20170808 17:13:51.216"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -843,14 +855,14 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.073" starttime="20170629 11:58:51.072"></status>
+<status status="PASS" endtime="20170808 17:13:51.217" starttime="20170808 17:13:51.217"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.074" starttime="20170629 11:58:51.073"></status>
+<status status="PASS" endtime="20170808 17:13:51.218" starttime="20170808 17:13:51.217"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -862,8 +874,8 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.075" level="INFO">${id} = delivery_start_00</msg>
-<status status="PASS" endtime="20170629 11:58:51.076" starttime="20170629 11:58:51.074"></status>
+<msg timestamp="20170808 17:13:51.219" level="INFO">${id} = delivery_start_00</msg>
+<status status="PASS" endtime="20170808 17:13:51.219" starttime="20170808 17:13:51.218"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -873,19 +885,19 @@ SetDateTimePickerValue('period_tender_end','2017-07-02 11:58');</msg>
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.077" level="INFO">${ddd} = SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:51.077" starttime="20170629 11:58:51.076"></status>
+<msg timestamp="20170808 17:13:51.220" level="INFO">${ddd} = SetDateTimePickerValue('delivery_start_00','2017-08-10 17:13:51');</msg>
+<status status="PASS" endtime="20170808 17:13:51.221" starttime="20170808 17:13:51.220"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:51.078" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:51.251" starttime="20170629 11:58:51.077"></status>
+<msg timestamp="20170808 17:13:51.221" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('delivery_start_00','2017-08-10 17:13:51');</msg>
+<status status="PASS" endtime="20170808 17:13:51.298" starttime="20170808 17:13:51.221"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:51.251" starttime="20170629 11:58:51.066"></status>
+<status status="PASS" endtime="20170808 17:13:51.298" starttime="20170808 17:13:51.213"></status>
 </kw>
 <kw name="Set DataTime">
 <arguments>
@@ -895,22 +907,21 @@ SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
 <kw name="Get Current Date" library="DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
 <arguments>
-<arg>result_format=%Y-%m-%d %H:%M</arg>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
 <arg>increment=${delta}</arg>
-<arg>exclude_millis=True</arg>
 </arguments>
 <assign>
 <var>${dt}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.254" level="INFO">${dt} = 2017-07-02 11:58</msg>
-<status status="PASS" endtime="20170629 11:58:51.255" starttime="20170629 11:58:51.253"></status>
+<msg timestamp="20170808 17:13:51.300" level="INFO">${dt} = 2017-08-11 17:13:51</msg>
+<status status="PASS" endtime="20170808 17:13:51.300" starttime="20170808 17:13:51.299"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.256" starttime="20170629 11:58:51.255"></status>
+<status status="PASS" endtime="20170808 17:13:51.302" starttime="20170808 17:13:51.300"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -918,7 +929,7 @@ SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
 <arg>Run Keyword If</arg>
 <arg>${dt.minute}==${0}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.257" starttime="20170629 11:58:51.257"></status>
+<status status="PASS" endtime="20170808 17:13:51.303" starttime="20170808 17:13:51.303"></status>
 </kw>
 <kw name="Comment" library="BuiltIn">
 <doc>Displays the given messages in the log file as keyword arguments.</doc>
@@ -927,14 +938,14 @@ SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
 <arg>Set Variable</arg>
 <arg>${dt.year}-${dt.month}-${dt.day} ${dt.hour}:${dt.minute}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.267" starttime="20170629 11:58:51.258"></status>
+<status status="PASS" endtime="20170808 17:13:51.304" starttime="20170808 17:13:51.303"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${dt}</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.269" starttime="20170629 11:58:51.268"></status>
+<status status="PASS" endtime="20170808 17:13:51.305" starttime="20170808 17:13:51.304"></status>
 </kw>
 <kw name="Replace String" library="String">
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
@@ -946,8 +957,8 @@ SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
 <assign>
 <var>${id}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.271" level="INFO">${id} = delivery_end_00</msg>
-<status status="PASS" endtime="20170629 11:58:51.271" starttime="20170629 11:58:51.270"></status>
+<msg timestamp="20170808 17:13:51.305" level="INFO">${id} = delivery_end_00</msg>
+<status status="PASS" endtime="20170808 17:13:51.306" starttime="20170808 17:13:51.305"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -957,65 +968,65 @@ SetDateTimePickerValue('delivery_start_00','2017-07-01 11:58');</msg>
 <assign>
 <var>${ddd}</var>
 </assign>
-<msg timestamp="20170629 11:58:51.273" level="INFO">${ddd} = SetDateTimePickerValue('delivery_end_00','2017-07-02 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:51.273" starttime="20170629 11:58:51.272"></status>
+<msg timestamp="20170808 17:13:51.306" level="INFO">${ddd} = SetDateTimePickerValue('delivery_end_00','2017-08-11 17:13:51');</msg>
+<status status="PASS" endtime="20170808 17:13:51.307" starttime="20170808 17:13:51.306"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>${ddd}</arg>
 </arguments>
-<msg timestamp="20170629 11:58:51.274" level="INFO">Executing JavaScript:
-SetDateTimePickerValue('delivery_end_00','2017-07-02 11:58');</msg>
-<status status="PASS" endtime="20170629 11:58:51.477" starttime="20170629 11:58:51.274"></status>
+<msg timestamp="20170808 17:13:51.307" level="INFO">Executing JavaScript:
+SetDateTimePickerValue('delivery_end_00','2017-08-11 17:13:51');</msg>
+<status status="PASS" endtime="20170808 17:13:51.378" starttime="20170808 17:13:51.307"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:51.477" starttime="20170629 11:58:51.252"></status>
+<status status="PASS" endtime="20170808 17:13:51.378" starttime="20170808 17:13:51.298"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>next step before public</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.478" starttime="20170629 11:58:51.478"></status>
+<status status="PASS" endtime="20170808 17:13:51.379" starttime="20170808 17:13:51.379"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>id=update_00</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:51.800" starttime="20170629 11:58:51.496"></status>
+<status status="PASS" endtime="20170808 17:13:51.561" starttime="20170808 17:13:51.380"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=update_00</arg>
 </arguments>
-<msg timestamp="20170629 11:58:51.801" level="INFO">Clicking button 'id=update_00'.</msg>
-<status status="PASS" endtime="20170629 11:58:51.960" starttime="20170629 11:58:51.801"></status>
+<msg timestamp="20170808 17:13:51.562" level="INFO">Clicking button 'id=update_00'.</msg>
+<status status="PASS" endtime="20170808 17:13:51.718" starttime="20170808 17:13:51.561"></status>
 </kw>
 <kw name="Execute Javascript" library="Selenium2Library">
 <doc>Executes the given JavaScript code.</doc>
 <arguments>
 <arg>window.scroll(-1000, -1000)</arg>
 </arguments>
-<msg timestamp="20170629 11:58:51.962" level="INFO">Executing JavaScript:
+<msg timestamp="20170808 17:13:51.719" level="INFO">Executing JavaScript:
 window.scroll(-1000, -1000)</msg>
-<status status="PASS" endtime="20170629 11:58:52.228" starttime="20170629 11:58:51.962"></status>
+<status status="PASS" endtime="20170808 17:13:51.726" starttime="20170808 17:13:51.719"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
 <arg>id=next_step</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:52.611" starttime="20170629 11:58:52.230"></status>
+<status status="PASS" endtime="20170808 17:13:51.822" starttime="20170808 17:13:51.727"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=next_step</arg>
 </arguments>
-<msg timestamp="20170629 11:58:52.619" level="INFO">Clicking button 'id=next_step'.</msg>
-<status status="PASS" endtime="20170629 11:58:53.964" starttime="20170629 11:58:52.613"></status>
+<msg timestamp="20170808 17:13:51.822" level="INFO">Clicking button 'id=next_step'.</msg>
+<status status="PASS" endtime="20170808 17:13:52.259" starttime="20170808 17:13:51.822"></status>
 </kw>
 <kw name="публикация">
 <kw name="Execute Javascript" library="Selenium2Library">
@@ -1023,9 +1034,9 @@ window.scroll(-1000, -1000)</msg>
 <arguments>
 <arg>window.scroll(0, -1500)</arg>
 </arguments>
-<msg timestamp="20170629 11:58:53.970" level="INFO">Executing JavaScript:
+<msg timestamp="20170808 17:13:52.262" level="INFO">Executing JavaScript:
 window.scroll(0, -1500)</msg>
-<status status="PASS" endtime="20170629 11:58:54.104" starttime="20170629 11:58:53.969"></status>
+<status status="PASS" endtime="20170808 17:13:52.341" starttime="20170808 17:13:52.260"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -1040,13 +1051,26 @@ window.scroll(0, -1500)</msg>
 </arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170629 11:58:59.358" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170629 11:58:59.359" starttime="20170629 11:58:59.178"></status>
+<msg timestamp="20170808 17:13:52.630" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<status status="FAIL" endtime="20170808 17:13:52.631" starttime="20170808 17:13:52.626"></status>
 </kw>
-<msg timestamp="20170629 11:58:59.360" level="FAIL">Element 'id=save_changes' was not visible in 5 seconds</msg>
-<status status="FAIL" endtime="20170629 11:58:59.360" starttime="20170629 11:58:54.106"></status>
+<msg timestamp="20170808 17:13:52.631" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<msg timestamp="20170808 17:13:52.632" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<status status="FAIL" endtime="20170808 17:13:52.632" starttime="20170808 17:13:52.342"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:59.360" starttime="20170629 11:58:54.105"></status>
+<status status="PASS" endtime="20170808 17:13:52.633" starttime="20170808 17:13:52.342"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -1059,136 +1083,69 @@ window.scroll(0, -1500)</msg>
 <arguments>
 <arg>id=save_changes</arg>
 </arguments>
-<msg timestamp="20170629 11:58:59.362" level="INFO">Clicking button 'id=save_changes'.</msg>
+<msg timestamp="20170808 17:13:52.634" level="INFO">Clicking button 'id=save_changes'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170629 11:58:59.695" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170629 11:58:59.696" starttime="20170629 11:58:59.469"></status>
-</kw>
-<msg timestamp="20170629 11:58:59.697" level="FAIL">ElementNotVisibleException: Message: element not visible
+<msg timestamp="20170808 17:13:52.642" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </msg>
-<status status="FAIL" endtime="20170629 11:58:59.698" starttime="20170629 11:58:59.361"></status>
+<status status="FAIL" endtime="20170808 17:13:52.642" starttime="20170808 17:13:52.637"></status>
 </kw>
-<status status="PASS" endtime="20170629 11:58:59.698" starttime="20170629 11:58:59.361"></status>
+<msg timestamp="20170808 17:13:52.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<msg timestamp="20170808 17:13:52.643" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<status status="FAIL" endtime="20170808 17:13:52.643" starttime="20170808 17:13:52.634"></status>
+</kw>
+<status status="PASS" endtime="20170808 17:13:52.644" starttime="20170808 17:13:52.633"></status>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
 <arg>id=movePurchaseView</arg>
 </arguments>
-<status status="PASS" endtime="20170629 11:58:59.747" starttime="20170629 11:58:59.699"></status>
-</kw>
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Wait Until Element Is Not Visible</arg>
-<arg>xpath=.//div[@class='page-loader animated fadeIn']</arg>
-</arguments>
-<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is not visible.</doc>
-<arguments>
-<arg>xpath=.//div[@class='page-loader animated fadeIn']</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:58:59.775" starttime="20170629 11:58:59.748"></status>
-</kw>
-<status status="PASS" endtime="20170629 11:58:59.775" starttime="20170629 11:58:59.747"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>id=movePurchaseView</arg>
-</arguments>
-<msg timestamp="20170629 11:58:59.776" level="INFO">Clicking button 'id=movePurchaseView'.</msg>
-<status status="PASS" endtime="20170629 11:59:01.331" starttime="20170629 11:58:59.776"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>id=publishPurchase</arg>
-<arg>50</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:59:01.523" starttime="20170629 11:59:01.333"></status>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is enabled.</doc>
-<arguments>
-<arg>id=publishPurchase</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:59:01.759" starttime="20170629 11:59:01.524"></status>
-</kw>
-<kw name="Get Location" library="Selenium2Library">
-<doc>Returns the current location.</doc>
-<assign>
-<var>${id}</var>
-</assign>
-<msg timestamp="20170629 11:59:01.772" level="INFO">${id} = http://192.168.90.169:90/purchase/192304</msg>
-<status status="PASS" endtime="20170629 11:59:01.772" starttime="20170629 11:59:01.761"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${id}</arg>
-</arguments>
-<status status="PASS" endtime="20170629 11:59:01.773" starttime="20170629 11:59:01.772"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20170629 11:59:03.774" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20170629 11:59:03.774" starttime="20170629 11:59:01.773"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>id=publishPurchase</arg>
-</arguments>
-<msg timestamp="20170629 11:59:03.776" level="INFO">Clicking button 'id=publishPurchase'.</msg>
-<status status="PASS" endtime="20170629 11:59:03.900" starttime="20170629 11:59:03.775"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<arguments>
-<arg>id=purchaseProzorroId</arg>
-<arg>90</arg>
-</arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170629 11:59:03.921" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20170808 17:13:52.650" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </msg>
-<status status="FAIL" endtime="20170629 11:59:03.923" starttime="20170629 11:59:03.908"></status>
+<status status="FAIL" endtime="20170808 17:13:52.651" starttime="20170808 17:13:52.647"></status>
 </kw>
-<msg timestamp="20170629 11:59:03.938" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20170808 17:13:52.651" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </msg>
-<msg timestamp="20170629 11:59:03.946" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20170808 17:13:52.652" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </msg>
-<status status="FAIL" endtime="20170629 11:59:03.959" starttime="20170629 11:59:03.901"></status>
+<status status="FAIL" endtime="20170808 17:13:52.652" starttime="20170808 17:13:52.644"></status>
 </kw>
-<status status="FAIL" endtime="20170629 11:59:03.964" starttime="20170629 11:58:53.968"></status>
+<status status="FAIL" endtime="20170808 17:13:52.653" starttime="20170808 17:13:52.260"></status>
 </kw>
 <kw type="teardown" name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20170629 11:59:04.046" starttime="20170629 11:59:03.974"></status>
+<status status="PASS" endtime="20170808 17:13:52.670" starttime="20170808 17:13:52.653"></status>
 </kw>
-<status status="FAIL" endtime="20170629 11:59:04.047" critical="yes" starttime="20170629 11:58:26.410">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" endtime="20170808 17:13:52.671" critical="yes" starttime="20170808 17:13:35.645">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </status>
 </test>
-<status status="FAIL" endtime="20170629 11:59:04.048" starttime="20170629 11:58:26.273"></status>
+<status status="FAIL" endtime="20170808 17:13:52.674" starttime="20170808 17:13:35.415"></status>
 </suite>
 <statistics>
 <total>
@@ -1202,10 +1159,20 @@ from unknown error: web view not found
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170629 11:59:03.938" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+<msg timestamp="20170808 17:13:52.631" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-81-generic x86_64)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<msg timestamp="20170808 17:13:52.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
+</msg>
+<msg timestamp="20170808 17:13:52.651" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-89-generic x86_64)
 </msg>
 </errors>
 </robot>
