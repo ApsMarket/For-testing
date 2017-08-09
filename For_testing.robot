@@ -6,6 +6,7 @@ Library           FakerLibrary
 
 *** Test Cases ***
 Создать допороговый тендер
+    [Tags]    full_tender
     Close All Browsers
     Open Browser    https://test-gov.ald.in.ua    chrome
     Comment    Open Browser    http://192.168.90.169:90    chrome
@@ -84,16 +85,24 @@ Library           FakerLibrary
     [Teardown]    Close All Browsers
 
 Загрузка главной страницы
+    [Tags]    run
     Открытие главной страницы
     Close All Browsers
+    [Teardown]    Close All Browsers
 
 Отображение списка тендеров
+    [Tags]    run
     Открытие главной страницы
+    [Teardown]    Close All Browsers
 
 Авторизация
+    [Tags]    run
     Авторизация
+    [Teardown]    Close All Browsers
 
 Инфо до клика Наступний крок
+    [Tags]    run
+    [Setup]    Close All Browsers
     Открытие главной страницы
     Авторизация
     Выбор из меню створити
