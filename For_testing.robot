@@ -83,13 +83,25 @@ Library           DateTime
 Загрузка главной страницы
     Открытие главной страницы
     Close All Browsers
+    [Teardown]    Close All Browsers
 
 Отображение списка тендеров
     Открытие главной страницы
+    Page Should Contain Element    //*[@id='purchase-page']/div/div[1]
+    [Teardown]    Close All Browsers
 
 Авторизация
+    Открытие главной страницы
     Авторизация
+    Element Should Be Visible    //*[@id='header']/nav/div[2]/ul/li[6]/a/i[@class="pe-7s-user"]
+    [Teardown]    Close All Browsers
+
 Инфо до клика Наступний крок
+    [Teardown]    Close All Browsers
+
+Добавление позиции
+
+Сохранение черновика
 
 *** Keywords ***
 Set DataTime
@@ -127,6 +139,7 @@ Set DataTime
     Open Browser    https://test-gov.ald.in.ua    chrome
     Set Window Position    0    0
     Set Window Size    1500    1000
+
 Ввод текстовых данных название валюта
     #Название
     Wait Until Element Is Enabled    id=title
@@ -145,6 +158,16 @@ Set DataTime
     Input Text    id=Email    qa1@gmail.com
     Input Password    id=Password    qwerty123
     Click Button    id=submitLogin
+
 Многолотовый тендер
     Log To Console    Выбор многолотовости
     Click Element    is_multilot
+
+Общая информация
+
+Классификаторы
+    [Arguments]    ${dk}=${09000000-3}    ${other_dk}=${000}
+
+Адрес доставки
+
+Сохранение изменений
