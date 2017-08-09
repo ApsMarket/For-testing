@@ -108,6 +108,20 @@ Library           FakerLibrary
     Выбор из меню створити
     Click Button    next_step
 
+Сохранение черновика
+
+Добавление позиции
+    Открытие главной страницы
+    Авторизация
+    Выбор из меню створити
+    Ввод текстовых данных название валюта
+    Однолотовый тендер
+    Ввод дат
+    Click Button    next_step
+    Переход на доб позиции
+    Info item
+    Классификаторы
+
 *** Keywords ***
 Set DataTime
     [Arguments]    ${dd}    ${delta}
@@ -175,7 +189,16 @@ Set DataTime
     Set DataTime    period_enquiry_end    +24 hour
     Set DataTime    period_tender_start    +24 hour
     Set DataTime    period_tender_end    +168 hour
-Общая информация
+
+Info item
+    Wait Until Element Is Enabled    id=procurementSubject_description00
+    ${xxx}=    Generate Random String
+    Input Text    id=procurementSubject_description00    Testing_item_${xxx}
+    ${random_numbers}=    Generate Random String    length=3    chars=[NUMBERS]
+    Input Text    id=procurementSubject_quantity00    ${random_numbers}
+    ${random_unit}=    Random Sample    ('4A', 'KWT', 'RM', 'KGM')    1
+    Select From List By Value    id=select_unit00    ${random_unit[0]}
+    [Teardown]    Close All Browsers
 
 Однолотовый тендер
     Log To Console    Бюджет
@@ -184,13 +207,27 @@ Set DataTime
     Log To Console    Минимальный шаг
     Wait Until Element Is Visible    id=min_step_percentage
     Input Text    id=min_step_percentage    2
+
 Классификаторы
-    [Arguments]    ${dk}=${09000000-3}    ${other_dk}=${000}
+    Comment    Full click    cls_click_
+    Click Button    cls_click_
+    Log To Console    after click on button
 
 Выбор из меню створити
     Log To Console    Выбор процедуры из меню
     Click Button    btn_create_purchase
     Click Element    url_create_purchase_1
+
 Адрес доставки
 
 Сохранение изменений
+
+Переход на доб позиции
+    Full click    add_procurement_subject0
+
+Full click
+    [Arguments]    ${id_loc}
+    Wait Until Page Contains Element    ${id_loc}
+    Wait Until Element Is Enabled    ${id_loc}
+    Wait Until Element Is Visible    ${id_loc}
+    Click Element    ${id_loc}
